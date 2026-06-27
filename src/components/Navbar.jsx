@@ -64,7 +64,7 @@ export default function Navbar({ onLoginClick, onRegisterClick }) {
           )}
         </div>
 
-        <button className={styles.hamburger} onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
+        <button className={`${styles.hamburger} ${mobileOpen ? styles.hamburgerOpen : ''}`} onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
           <span /><span /><span />
         </button>
       </nav>

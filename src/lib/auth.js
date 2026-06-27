@@ -13,11 +13,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       async authorize(credentials) {
         if (!credentials?.username || !credentials?.password) return null;
         
-        const user = await prisma.user.findUnique({
-          where: { username: credentials.username },
-        });
-
-        if (!user) return null;
+        const users = await prisma.$queryRaw`SELECT * FROM users WHERE username = ${credentials.username} LIMIT 1`;
+        
+        if (!users || users.length === 0) return null;
+        const user = users[0];
         
         // Plaintext comparison as requested by user
         if (user.password !== credentials.password) return null;

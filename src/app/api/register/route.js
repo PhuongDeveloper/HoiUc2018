@@ -41,8 +41,8 @@ export async function POST(request) {
     const createtime = new Date().toISOString().slice(0, 19).replace('T', ' '); // YYYY-MM-DD HH:mm:ss format
     
     await prisma.$executeRaw`
-      INSERT INTO users (username, password, status, activated, createtime, ip, balance, luong, total_money, tongnap, coin)
-      VALUES (${username}, ${password}, 0, 1, ${createtime}, '127.0.0.1', 0, 0, 0, 0, 0)
+      INSERT INTO users (username, password, status, activated, createtime, ip)
+      VALUES (${username}, ${password}, 0, 1, ${createtime}, '127.0.0.1')
     `;
 
     return NextResponse.json(

@@ -1,0 +1,200 @@
+.hero {
+  padding: 80px 0 40px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.heroCard {
+  background: var(--bg-secondary);
+  border: var(--border-width-thick) solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 48px;
+  box-shadow: var(--shadow-brutal-lg);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.heroLeft {
+  flex: 1;
+  max-width: 520px;
+}
+
+.serverStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: #E8F5E9;
+  border: var(--border-width-thin) solid var(--border-color);
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2E7D32;
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4CAF50;
+  border: 1px solid var(--border-color);
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.heroTitleGradient {
+  color: var(--accent-red);
+  text-shadow: 2px 2px 0px #FFD2D2;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+.heroCta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btnCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  font-weight: 900;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-heading);
+  border: var(--border-width-thin) solid var(--border-color);
+  text-decoration: none;
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.btnCtaPrimary {
+  background: var(--accent-red);
+  color: #ffffff;
+}
+
+.btnCtaPrimary:hover {
+  background: var(--accent-red-dark);
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-brutal-md);
+}
+
+.btnCtaPrimary:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--border-color);
+}
+
+.btnCtaSecondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.btnCtaSecondary:hover {
+  background: var(--accent-red-light);
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-brutal-md);
+}
+
+.btnCtaSecondary:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--border-color);
+}
+
+.heroRight {
+  flex: 1.1;
+  max-width: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoCard {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+  border: var(--border-width-thick) solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal-md);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--accent-red);
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  opacity: 0.3;
+}
+
+@media (max-width: 900px) {
+  .heroCard {
+    flex-direction: column-reverse;
+    padding: 32px;
+    text-align: center;
+    gap: 32px;
+  }
+  .heroLeft {
+    max-width: 100%;
+  }
+  .heroSubtitle {
+    margin-bottom: 24px;
+  }
+  .heroCta {
+    justify-content: center;
+  }
+  .heroRight {
+    width: 100%;
+    max-width: 100%;
+  }
+}

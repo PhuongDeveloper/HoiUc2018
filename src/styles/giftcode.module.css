@@ -1,0 +1,204 @@
+.page {
+  padding-top: 40px;
+  min-height: calc(100vh - var(--header-height));
+  background-color: var(--bg-primary);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 20px 0;
+}
+
+.headerTitle {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.headerDesc {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: var(--border-width-thick) solid var(--border-color);
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-brutal-md);
+  margin-bottom: 40px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 900;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  background: var(--accent-red-light);
+  border-bottom: var(--border-width-thick) solid var(--border-color);
+}
+
+.table td {
+  padding: 16px 20px;
+  border-bottom: var(--border-width-thin) solid var(--border-color);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr {
+  transition: background 0.1s;
+}
+
+.table tr:hover {
+  background: #FCFAF7;
+}
+
+.codeCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.codeText {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent-red);
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  background: var(--accent-red-light);
+  padding: 6px 12px;
+  border: var(--border-width-thin) solid var(--border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.copyBtn {
+  background: var(--bg-secondary);
+  border: var(--border-width-thin) solid var(--border-color);
+  color: var(--text-primary);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 900;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.copyBtn:hover {
+  background: var(--accent-red-light);
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-brutal-md);
+}
+
+.copied {
+  color: #ffffff;
+  background: #2E7D32;
+  border-color: var(--border-color);
+}
+
+.copied:hover {
+  background: #2E7D32;
+}
+
+.rewardBadge {
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-right: 8px;
+  margin-bottom: 6px;
+  border: var(--border-width-thin) solid var(--border-color);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.coinBadge {
+  background: #FFF9C4;
+  color: #F57F17;
+}
+
+.goldBadge {
+  background: #FFF3E0;
+  color: #E65100;
+}
+
+.yenBadge {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.guide {
+  margin-top: 40px;
+  padding: 32px;
+  background: var(--bg-secondary);
+  border: var(--border-width-thick) solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal-md);
+}
+
+.guideTitle {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.guideText {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-weight: 600;
+}
+
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.itemRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.itemIconPlaceholder {
+  width: 20px;
+  height: 20px;
+  background: #e0e0e0;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.noItem {
+  color: var(--text-muted);
+  font-weight: 600;
+}

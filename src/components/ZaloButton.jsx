@@ -4,7 +4,7 @@ import styles from '@/styles/zalo.module.css';
 export default function ZaloButton() {
   return (
     <a
-      href="https://zalo.me/g/hoiuc2018"
+      href="https://zalo.me/g/zwjwpd723"
       target="_blank"
       rel="noopener noreferrer"
       className={styles.zaloButton}

@@ -7,7 +7,7 @@ export default function CommunityPage() {
     {
       title: 'Nhóm Zalo Trao Đổi',
       description: 'Tham gia nhóm Zalo cộng đồng lớn mạnh. Nơi mua bán, trao đổi kinh nghiệm, tìm tổ đội và thảo luận sự kiện.',
-      url: 'https://zalo.me/g/hoiuc2018',
+      url: 'https://zalo.me/g/zwjwpd723',
       badge: 'Zalo',
     },
     {

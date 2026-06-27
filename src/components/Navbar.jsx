@@ -26,6 +26,7 @@ export default function Navbar({ onLoginClick, onRegisterClick }) {
   ];
 
   return (
+    <>
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
       <nav className={styles.navbar}>
         <Link href="/" className={styles.logo}>
@@ -68,33 +69,35 @@ export default function Navbar({ onLoginClick, onRegisterClick }) {
         </button>
       </nav>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            className={`${styles.mobileMenu} ${styles.mobileMenuOpen}`}
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-          >
-            {links.map(link => (
-              <Link key={link.href} href={link.href} className={styles.navLink} onClick={() => setMobileOpen(false)}>
-                {link.label}
-              </Link>
-            ))}
-            {session ? (
-              <>
-                <Link href="/profile" className={styles.navLink} onClick={() => setMobileOpen(false)}>Hồ sơ</Link>
-                <button className={styles.btnLogin} onClick={() => { signOut({ callbackUrl: '/' }); setMobileOpen(false); }}>Đăng xuất</button>
-              </>
-            ) : (
-              <>
-                <button className={styles.btnLogin} onClick={() => { onLoginClick(); setMobileOpen(false); }}>Đăng nhập</button>
-                <button className={styles.btnRegister} onClick={() => { onRegisterClick(); setMobileOpen(false); }}>Đăng ký</button>
-              </>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
     </header>
+
+    <AnimatePresence>
+      {mobileOpen && (
+        <motion.div
+          className={`${styles.mobileMenu} ${styles.mobileMenuOpen}`}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+        >
+          {links.map(link => (
+            <Link key={link.href} href={link.href} className={styles.navLink} onClick={() => setMobileOpen(false)}>
+              {link.label}
+            </Link>
+          ))}
+          {session ? (
+            <>
+              <Link href="/profile" className={styles.navLink} onClick={() => setMobileOpen(false)}>Hồ sơ</Link>
+              <button className={styles.btnLogin} onClick={() => { signOut({ callbackUrl: '/' }); setMobileOpen(false); }}>Đăng xuất</button>
+            </>
+          ) : (
+            <>
+              <button className={styles.btnLogin} onClick={() => { onLoginClick(); setMobileOpen(false); }}>Đăng nhập</button>
+              <button className={styles.btnRegister} onClick={() => { onRegisterClick(); setMobileOpen(false); }}>Đăng ký</button>
+            </>
+          )}
+        </motion.div>
+      )}
+    </AnimatePresence>
+    </>
   );
 }
